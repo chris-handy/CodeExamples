@@ -1,0 +1,89 @@
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+background-color:#69F;	
+}
+#wrapper{
+	border: 1px solid black;
+	width:800px;
+	margin: 0px auto;
+	background-color:#82C0FF;
+	border-radius: 15px;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+}
+
+#wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#masthead{
+background:url(../img/formbanner.png) no-repeat top left;
+height:200px;
+}
+
+
+#content{
+background-color:#C1E0FF;
+border: 1px solid #666;
+float:left;
+width:730px;
+margin:2em;
+
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+
+}
+
+
+#form div{
+padding: 10px 10px;
+overflow:auto;
+}
+
+#footer{
+float:left;
+width:770px;
+border-top:1px solid black;
+line-height:30px;
+padding-left:30px;
+}
+
+label{
+	width:100px;
+	margin-right:20px;
+	float:left;
+}
+
+.error{
+		padding-left: 28px;
+		color: red;
+		background: url(../img/exclamation.png) no-repeat 2px center;
+}
+
+.highlighted
+{
+		background: #ffC;
+		border-color: #ff1;
+		color: #0d0d0d;
+}
+
+fieldset {
+	margin: 1.5em;
+	padding: 2em;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Registration Form. No need for anything else.</title>
+
+<link type="text/css" rel="stylesheet" href="style/main.css" media="screen, projection" />
+<script src="scripts/main.js" type="text/javascript"> </script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="masthead">
+</div><!--close the masthead tag-->
+
+
+<div id="content">
+<form name="form" id="form" action="http://faculty.edumedia.ca/griffis/imm/mtm1519/thanks.php" method="post">
+    	<fieldset>
+        	<legend></legend>
+			<div class="fieldBox">
+            	<label for="username">Username: </label>
+                <input type="text" name="username" id="username" value=""  maxlength="40"/>
+            </div>
+            <div class="fieldBox">
+            	<label for="pass">Password: </label>
+                <input type="password" name="pass" id="pass" value="" />
+            </div>
+			<div class="fieldBox">
+            	<label for="pass2">Re-Type Password: </label>
+                <input type="password" name="pass2" id="pass2" value="" />
+            </div>
+			<div class="fieldBox">
+            	<label for="email">E-mail Address: </label>
+                <input type="text" name="email" id="email" value="" />
+            </div>
+            <div class="fieldBox">
+            	<label for="dob">Date of Birth: </label>
+                <input type="text" name="dobMonth" id="dobMonth" value="" maxlength="2" size="2"/>
+                <input type="text" name="dobDay" id="dobDay"value="" maxlength="2" size="2"/>
+                <input type="text" name="dobYear" id="dobYear"value="" maxlength="4" size="4" />
+            </div>
+            <div class="fieldBox">
+            	<label for="sQuestion">Secret Question: </label>
+               	<select name="sQuestion" id="sQuestion" class="wide">
+					<option selected="selected">Select a secret question</option>
+                    	<option value="1">What is your mothers maiden name?</option>
+                        <option value="2">What is the name of your high-school?</option>
+                        <option value="3">What is the name of your first pet?</option>
+                        <option value="4">What is the name of your hometown?</option>
+                        <option value="5">What is your favourite hobby?</option>
+                        <option value="6">What is your favourite band?</option>
+     </select>
+                 <br />
+                 <br />
+                 <label for="sAnswer">Secret Answer:</label>
+                 <input type="text" name="sAnswer" id="sAnswer" maxlength="50" size="50" />
+            </div>            
+			<div class="fieldBox">
+            	<label>Agree to terms: </label>
+                <input type="checkbox" name="check" id="check" value="" />
+            </div>
+            <div class="fieldBox">
+            	<input type="submit" name="btnSubmit" id="btnSubmit" value="SEND"/>
+                <input type="button" name="btnReset" id="btnReset" value="Reset"/>
+            </div>
+        </fieldset>
+    </form>
+	</div><!--close the content tag-->
+	<div id="footer">
+	<p>&copy; Copyright 2009 THE Registration Form. All rights reserved.</p>
+	</div><!--close the footer tag-->
+</div><!--close the wrapper tag-->
+</body>
+</html>

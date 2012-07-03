@@ -1,0 +1,248 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 75% tahoma, sans-serif;
+	line-height: 1.88889;
+	color:#CCCCCC;
+	background: #000 url(../img/starscape.jpg) no-repeat top left;
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin-top: 0;
+	text-align: justify;
+}
+h3 {
+	font: italic normal 1.4em tahoma, sans-serif;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	color:#FFCC66;
+	padding-right: 240px;
+}
+h3 span {
+	visibility:hidden;
+	display:none;
+}
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color:#C90;
+}
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color:#FF9;
+}
+a:hover, a:active {
+	text-decoration: underline;
+	color:#F60;
+}
+acronym {
+	border-bottom: none;
+}
+/* specific divs */
+#container {
+	padding-right:-175px;
+	margin: 0 auto;
+	position: relative;
+	width: 950px;
+}
+#intro {
+	background: url(../img/explodingplanet.png) no-repeat top center;
+	min-width: 470px;
+}
+#quickSummary {
+	padding-top:300px;
+	width: 750px;
+}
+#preamble {
+	margin-bottom:20px;
+	width:760px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#supportingText {
+	width:760px;
+}
+#explanation {
+	margin-bottom:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#participation {
+	margin-bottom:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#benefits {
+	margin-bottom:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#requirements {
+	margin-bottom:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#footer {
+	text-align: center;
+}
+#pageHeader h1 {
+	margin-top: 10px;
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+#pageHeader h1 span {
+	display:none
+}
+#pageHeader h2 {
+	margin-top: 58px;
+	margin-bottom: 40px;
+	width: 183px;
+	height: 18px;
+	float: right;
+}
+#pageHeader h2 span {
+	display:none
+}
+#preamble p {
+	padding:0px 10px;
+}
+#explanation p {
+	padding:0px 10px;
+}
+#participation p {
+	padding:0px 10px;
+}
+#benefits p {
+	padding:0px 10px;
+}
+#requirements p {
+	padding:0px 10px;
+}
+#quickSummary p {
+	font: italic 10pt/22pt tahoma;
+	text-align:center;
+}
+#footer a:link, #footer a:visited {
+	margin-right: 20px;
+}
+#footer a:hover {
+	background:#CCC;
+}
+#linkList {
+	position: absolute;
+	top: 300px;
+	right: 10px;
+	width:150px;
+}
+#linkList2 {
+	font: 10px verdana, sans-serif;
+}
+#linkList #lselect, #larchives, #lresources {
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background: rgba(255, 255, 255, .2);
+}
+#linkList h3.select {
+	background: transparent url(../img/otherplanets.png) no-repeat top left;
+	height: 30px;
+}
+#linkList h3.select span {
+	display:none
+}
+#linkList h3.favorites span {
+	display:none
+}
+#linkList h3.archives {
+	background: transparent url(../img/archives.png) no-repeat top left;
+	margin: 25px 0 5px 0;
+	height: 30px;
+}
+#linkList h3.archives span {
+	display:none
+}
+#linkList h3.resources {
+	background: transparent url(../img/resources.png) no-repeat top left;
+	margin:25px 0 5px 0;
+	height: 30px;
+}
+#linkList h3.resources span {
+	display:none
+}
+#linkList li {
+	line-height: 2.5ex;
+	display: block;
+	padding:5px;
+	list-style-type: none;
+}
+#linkList li a:link {
+	color:#C90;
+}
+#linkList li a:hover {
+	color:#F60;
+}
+#linkList li a.c:link {
+	color:#C90;
+}
+#linkList li a.c:hover {
+	color:#F60;
+}
+#linkList li a:visited {
+	color:#F60;
+}
+#extraDiv1 {
+	position: absolute;
+	top: 40px;
+	right: 0;
+	width: 148px;
+	height: 110px;
+}
+.accesskey {
+	text-decoration: underline;
+}
+#preamble h3 {
+	background:url(../img/theroadtoenlightenment.png) no-repeat;
+	height:30px;
+}
+#explanation h3 {
+	background: url(../img/explanation.png) no-repeat;
+	height:30px
+}
+#participation h3 {
+	background:url(../img/participation.png) no-repeat;
+	height:30px;
+}
+#benefits h3 {
+	background: url(../img/benefits.png) no-repeat;
+	height: 30px;
+}
+#requirements h3 {
+	background: url(../img/requirements.png) no-repeat;
+	height: 30px;
+}

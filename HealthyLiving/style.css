@@ -1,0 +1,251 @@
+@charset "utf-8";
+/*Healthy Living Main CSS
+Author: Chris Handy
+Date: March 17 2010
+*/
+
+/*******************
+back to default styles
+*****************/
+*{margin:0;padding:0;}
+body{background:url(images/body_bg.jpg) repeat;font-family:Arial, Helvetica, sans-serif;font-size:0.75em;}
+
+/**********
+clearfix
+***********/
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.clearfix {display: inline-block;}
+html[xmlns] .clearfix {display: block;}
+ * html .clearfix {height: 1%;}
+/**************
+header styles
+**************/
+
+div#wrapper{margin:0px auto;width:960px;background-color:#fff;position:relative;}
+div#header{background:url(images/header_gradient.png) 0 105px no-repeat;position:relative;width:960px;height:140px;}
+div#header h1{background:url(images/logo.png) no-repeat;text-indent:-5000em; position:absolute;top:35px; left:33px;height:44px;width:443px;}
+div#header #searchBox{position:absolute;width:250px; top:34px; right:28px;}
+div#header #searchBox form fieldset{border:none;}
+div#header #searchBox form fieldset ul li{float:left;}
+div#header #searchBox form fieldset input{line-height:1.8em;height:28px;}
+.go{background:url(images/go_button.png) no-repeat;width:39px;height:32px;border:none;text-indent:-5000em}
+.go:hover{cursor:pointer;}
+div#header ul#navigation{
+	position:absolute;
+	list-style:none;
+	top:103px;
+	left:54px;
+}
+div#header ul#navigation li{float:left;}
+div#header ul#navigation li a{display:block;text-decoration:none;height:35.5px;text-indent:-5000em;background-repeat: no-repeat;background-position: 0 -35.5px}
+div #header ul#navigation li a:hover, div #header ul#navigation li a.active{background-position: 0 0px}
+a#homeNav{background:url(images/home.png); width:141px}
+a#blogNav{background:url(images/blog.png); width:142px}
+a#recipesNav{background:url(images/recipes.png); width:140px}
+a#galleryNav{background:url(images/gallery.png); width:142px}
+a#contactNav{background:url(images/contact.png); width:140px}
+a#aboutNav{background:url(images/about.png); width:142px}
+
+/*****************
+content(home)
+********************/
+div.ui-tabs .ui-tabs-hide {display: none;}
+div#tabs {position: relative; margin-top:20px; margin-left:30px;}
+div#tabs h3 {text-indent:-999em; background:url(images/featured_header.png) no-repeat; height:26px;margin-bottom:25px}
+div#tabs ul#tabNavigation {position: absolute; right: 0; top: 0; width: 330px; margin: 0; list-style:none;}
+div#tabs ul#tabNavigation li.tabArea {background:url(images/spacer.png) no-repeat 25px 55px;}
+div#tabs ul#tabNavigation li a {margin-bottom: 5px; display: block; height: 60px; width: 285px; color: #afafaf; text-decoration: none; font-size: 1.3em;}
+div#tabs ul#tabNavigation li a strong {font-weight:bold; width: 300px; display: block; line-height: 1.0em; padding: 10px 0 0px 25px;}
+div#tabs ul#tabNavigation li a span {margin-left:25px; color:#797979; font-size: 0.7em; text-transform:uppercase;}
+div#tabs ul#tabNavigation li a:hover, div#body ul#tabNavigation li a.active, div#body ul#tabNavigation li.ui-state-active a {background-position: 0 -81px; color: #f86a11;}	
+div#tabs div.tabContent {width: 599px; position:relative;}
+div#tabs div.tabContent p {bottom:2px;right:2px;font-size:1.0em; line-height:1.4em; color:#000; padding:2px 2px 2px 0px; position:absolute; text-align:right;}
+div#tabs div.tabContent p strong {display: block; font-size:1.2em;}
+div#tabs div.tabContent p em {display: block; font-size: 1.0em;}
+div#tabs div.tabContent p a {color: #F87A26; text-decoration: none; font-size: 1.0em; text-transform:uppercase;}
+div#tabs div.tabContent p a:hover {text-decoration: underline; color:#939393;}
+
+/******************
+about us (about)
+****************/
+div#aboutUs{position:relative;width:581px;margin-left:40px;margin-top:26px;}
+.aboutUsBlog{width:272px;position:absolute;top:400px;right:28px; }
+div#aboutUs h1{background:url(images/aboutus_title.png) no-repeat;width:581px;height:26px;text-indent:-5000px;margin-bottom:30px;margin-top:26px}
+div#aboutUs p{line-height:26px;margin-bottom:20px;}
+div#aboutUs ul li#newsletter{position:absolute;top:0;right:-100px;}
+
+/************
+eating well (recipes)
+***************/
+
+div#eatingWell{position:relative;width:581px;margin-left:40px;margin-top:26px;}
+div#eatingWell h1{background:url(images/eatingwell_title.png) no-repeat;width:581px;height:34px;text-indent:-5000px;margin-bottom:30px;margin-top:26px}
+div#eatingWell p{line-height:30px;margin-bottom:20px;background:url(images/spacer.png) no-repeat 20px 55px;padding-left:40px;}
+div#eatingWell ul li h4{background:url(images/categories_header.png) no-repeat;width:331px;height:33px;text-indent:-5000px;margin-bottom:10px;}
+div#eatingWell ul{width:331px; list-style:none;position:absolute;top:0;right:-331px}
+div#eatingWell ul li span{padding-left:40px;line-height:18px; }
+
+/*****************
+whole health (blog)
+****************/
+div#blogArea{width:581px;margin-left:41px;position:relative;margin-top:22px;}
+div#blogArea ul{list-style:none;margin-top:10px;}
+div#blogArea img{margin-top:10px;}
+div#blogArea h1{background:url(images/wholehealth_title.png) no-repeat;width:581px; height:54px;text-indent:-5000px;margin-bottom:15px;}
+div#blogArea h2{background:url(images/thesweetlife_title.png) no-repeat;width:557px; height:57px;text-indent:-5000px;margin-top:23px;}
+div#blogArea p{line-height:26px;}
+div#blogArea ul li{float:left;margin-left:20px;}
+div#blogArea a{color:#f78942;text-decoration:none;}
+ul{list-style:none;}
+ul li#blogCategories{width:330px;position:absolute;top:173px;right:0px;}
+ul li#blogCategories ul li h4{background:url(images/categories_header.png) no-repeat;width:330px;height:33px;text-indent:-5000px;}
+ul li#blogCategories ul li p{line-height:26px;background:url(images/spacer.png) no-repeat 20px 55px;padding-bottom:15px;padding-left:40px;}
+ul li#blogCategories ul li span{margin-left:40px;line-height:18px;}
+
+/*********************
+get in touch (contact)
+*******************/
+div#getInTouch{width:581px;margin-left:41px;margin-top:26px;position:relative;}
+div#getInTouch p{line-height:24px;}
+div#getInTouch h1{background:url(images/getintouch_title.png) no-repeat;height:35px;width:581px;text-indent:-5000px;margin-bottom:32px;}
+div#getInTouch form{margin-top:50px}
+div#getInTouch form fieldset{border:none; margin:10px 0;}
+div#getInTouch form label{display:inline;float:left;}
+div#getInTouch form input#fullname{float:left;clear:left;width:206px;}
+div#getInTouch form input#email{float:left;clear:left;width:206px;}
+div#getInTouch form input#postalcode{float:left;clear:left;width:206px;}
+div#getInTouch form input#gender1{margin:0px 10px;}
+div#getInTouch form fieldset textarea{float:left;clear:left}
+
+label { width: 10em; float: left; }
+label.error { float: none; margin-left:32px;color:#f78942; vertical-align: top; }
+
+
+ul#address{position:absolute;top:180px;right:0px;}
+ul#address li{padding:5px 0;padding-left:40px}
+ul#address li h4{background:url(images/head_office.png) no-repeat;height:39px;width:330px;text-indent:-5000px;}
+ul#address li span#one{color:#87c8b2;padding-left:40px}
+ul#address li span#two{color:#d8d452}
+ul#address li p{padding-left:40px}
+
+.send{background:url(images/send_button.png) no-repeat;border:none;height:31px;width:77px;text-indent:-5000;float:right;margin-right:30px;}
+
+
+#contact-twitter{position:absolute;width:290px;top:360px;right:28px;}
+#contact-twitter h4{background:url(images/latest_tweet.png) no-repeat;width:288px;height:29px;text-indent:-5000em;margin-bottom:}
+#contact-twitter span{color:#73af9b;}
+#contact-twitter p{color:#a4a4a4;}
+#contact-twitter a{text-decoration:none; color:#a4a4a4;}
+#contact-twitter a.follow{color:#f78942;text-decoration:none;float:right;margin-top:20px}
+#contact-twitter ul{float:right;}
+#contact-twitter ul li{float:left; padding-right:5px;margin-bottom:15px;}
+
+
+/******************
+be inspired (gallery)
+********************/
+div#beInspired{position:relative;}
+div#beInspired h1{background:url(images/be_inspired_header.png) no-repeat;height:43px;width:581px;text-indent:-5000px;margin:30px 0;}
+div#beInspired ul{position:absolute;top:13px;right:0px;width:330px;display:block;}
+div#beInspired ul li{margin:8px 0}
+div#beInspired ul li h4{background:url(images/photo_galleries.png) no-repeat;height:39px;width:330px;text-indent:-5000px;}
+div#beInspired ul li span{margin-left:40px;}
+div#beInspired ul li span.bold{font-weight:bold}
+
+#img{position:relative;margin-left:12px;text-align:center;width:600px;}
+#gallery{height:114px}
+#gallery li{float:left;background:transparent url(images/ajax-loader-small.gif) 50% 50% no-repeat;cursor:pointer}
+.galleria_wrapper{width:600px;text-align:center;margin-bottom:10px}
+span.caption{font-size:0.857em;color:#666}
+/* This <div> element is wrapped by jCarousel around the list and has the classname "jcarousel-container". */
+.jcarousel-container{position:relative}
+.jcarousel-clip{z-index:2;padding:0;margin:0;overflow:hidden;position:relative}
+.jcarousel-list{z-index:1;overflow:hidden;position:relative;top:0;left:0;margin:0;padding:0}
+.jcarousel-list li,
+.jcarousel-item{float:left;list-style:none;width:75px;height:75px}
+/* The buttons are added dynamically by jCarousel before the <ul> list (inside the <div> described above) and have the classnames "jcarousel-next" and "jcarousel-prev". */
+.jcarousel-next{z-index:3;display:none;text-indent:-999em}
+.jcarousel-prev{z-index:3;display:none;text-indent:-999em}
+.jcarousel-skin .jcarousel-container-horizontal{width:580px;padding:20px 10px}
+.jcarousel-skin .jcarousel-clip-horizontal{height:114px;}
+.jcarousel-skin .jcarousel-item{width:95px;height:95px; padding:5px;}
+.jcarousel-skin .jcarousel-item-placeholder{background:#0e0d0d;color:#000}
+.jcarousel-skin .jcarousel-next-horizontal{position:absolute;right:0;width:36px;height:114px;cursor:pointer;background:url(images/next_arrow.jpg) no-repeat;outline: none}
+.jcarousel-skin .jcarousel-next-disabled-horizontal{cursor:pointer;}
+.jcarousel-skin .jcarousel-prev-horizontal{position:absolute;left:0;width:36px;height:114px;cursor:pointer;background:url(images/prev_arrow.jpg) no-repeat;outline: none}
+.jcarousel-skin .jcarousel-prev-disabled-horizontal{cursor:pointer;}
+
+/******************
+call to actions
+*****************/
+
+ul#callToActions{list-style:none;margin-left:30px;margin-top:35px;}
+ul#callToActions li{float:left;width:300px;}
+
+/****************
+latest blog
+*****************/
+
+li#latestBlog h4{background:url(images/latest_blog.png) no-repeat;width:264px;height:17px;text-indent:-5000px;margin-bottom:22px;}
+li#latestBlog h5{font-size:16px;color:#f77825;margin-bottom:15px}
+li#latestBlog p{line-height:26px;}
+li#latestBlog a{color:#f78942;text-decoration:none;line-height:26px;}
+
+/**************
+featured recipes
+**************/
+li#featuredRecipes h4{background:url(images/featured_recipes.png) no-repeat;width:298px;height:19px;text-indent:-5000px;margin-bottom:16px;}
+li#featuredRecipes ul{list-style:none;}
+li#featuredRecipes ul li{margin-bottom:10px;width:240px;}
+li#featuredRecipes ul li img{float:left;margin-right:20px;}
+li#featuredRecipes ul li p{line-height:20px;font-size:12px;}
+li#featuredRecipes ul li span{color:#a4a4a4;line-height:20px;font-size:9px;}
+li#featuredRecipes ul li a{color:#f78942;text-decoration:none;line-height:20px;font-size:10px;}
+
+/*********************
+featured tips
+**********************/
+li#featuredTips h4{background:url(images/featuredtips_header.png) no-repeat;width:274px;height:15px;text-indent:-5000px;margin-bottom:16px;}
+li#featuredTips ul{list-style:none;}
+li#featuredTips ul li{margin-bottom:10px;width:240px;}
+li#featuredTips ul li img{float:left;margin-right:20px;}
+li#featuredTips ul li p{line-height:20px;font-size:12px;}
+li#featuredTips ul li span{color:#a4a4a4;line-height:20px;font-size:9px;}
+li#featuredTips ul li a{color:#f78942;text-decoration:none;line-height:20px;font-size:10px;}
+
+/******************
+get our newsletter
+*******************/
+li#newsletter{background:url(images/spacer.png) 0 80px no-repeat;}
+li#newsletter h4{background:url(images/get_newsletter.png) no-repeat;width:280px;height:16px;text-indent:-5000px;margin-bottom:21px;}
+li#newsletter p{margin-bottom:32px;}
+li#newsletter form fieldset{border:none;width:100px;}.
+li#newsletter label{line-height:30px;}
+.signup{background:url(images/signup_button.png) no-repeat;border:none;height:31px;width:79px;text-indent:-5000px;}
+.signup:hover{cursor:pointer;}
+
+.aboutUsNews{width:272px;position:absolute;top:163px;right:28px;}
+.wholeHealthNews{width:272px;position:absolute;top:495px;right:30px;}
+/****************
+footer styles
+****************/
+div#footer{height: 270px;width:960px;position:relative;background:url(images/footerbg.png) no-repeat 31.5px 220px;margin-top:40px; }
+div#footer ul{float:left;list-style:none;width:150px;font-size:12px;}
+div#footer ul:first-child{margin-left:50px;}
+div#footer ul li{margin-bottom:15px;}
+div#footer ul li a{text-decoration:none; color:#a4a4a4;}
+div#footer ul#categories li h5{background:url(images/categories.png) no-repeat;width:82px;height:9px;text-indent:-5000em;margin-bottom:23px;}
+div#footer ul#customerservice li h5{background:url(images/customer_service.png) no-repeat;width:132px;height:9px;text-indent:-5000em;margin-bottom:23px;}
+div#footer ul#aboutus li h5{background:url(images/about_us.png) no-repeat;width:66px;height:9px;text-indent:-5000em;margin-bottom:23px;}
+div#footer ul#eventspromotions li h5{background:url(images/events_promotions.png) no-repeat;width:149px;height:9px;text-indent:-5000em;margin-bottom:23px;}
+div#footer .copyright{position:absolute;bottom:0;right:0;}
+/**********
+twitter box
+************/
+div#footer div#twitter{float:right;width:290px;padding-right:10px;}
+div#footer div#twitter h4{background:url(images/latest_tweet.png) no-repeat;width:288px;height:29px;text-indent:-5000em;margin-bottom:}
+div#footer div#twitter span{color:#73af9b;}
+div#footer div#twitter p{color:#a4a4a4;}
+div#footer div#twitter a.follow{color:#f78942;text-decoration:none;float:right;margin-top:20px}
+div#footer div#twitter ul{float:right;width:auto;}
+div#footer div#twitter ul li{float:left; padding-right:5px;}

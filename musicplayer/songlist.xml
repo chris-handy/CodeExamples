@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<songdata>
+	<!-- the path to the songs can be held in the .as file so it cannot be read by others who 
+	download the xml playlist -->
+	<song>
+		<track>Blackout City.mp3</track>
+		<songName>Blackout City</songName>
+		<artist>Anamanaguchi</artist>	
+		<length>03:24</length>
+	</song>
+	<song>
+		<track>Danger Mountain.mp3</track>
+		<songName>Danger Mountain</songName>
+		<artist>Anamanaguchi</artist>
+		<length>02:11</length>
+	</song>
+	<song>
+		<track>Dawn Metropolis.mp3</track>
+		<songName>Dawn Metropolis</songName>
+		<artist>Anamanaguchi</artist>
+		<length>02:57</length>
+	</song>
+	<song>
+		<track>Jetpack Blues.mp3</track>
+		<songName>Jetpack Blues, Sunset Hues</songName>
+		<artist>Anamanaguchi</artist>
+		<length>03:28</length>
+	</song>
+	<song>
+		<track>Mermaid.mp3</track>
+		<songName>Mermaid</songName>
+		<artist>Anamanaguchi</artist>
+		<length>07:51</length>
+	</song>
+	<song>
+		<track>Overarrow.mp3</track>
+		<songName>Overarrow</songName>
+		<artist>Anamanaguchi</artist>
+		<length>02:40</length>
+	</song>
+	<song>
+		<track>Tempest, Teamwork, Triumph (At Sea).mp3</track>
+		<songName>Tempest, Teamwork, Triumph (At Sea)</songName>
+		<artist>Anamanaguchi</artist>
+		<length>03:37</length>
+	</song>
+</songdata>

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>OpenId FAQ's and Documents</title>
+<style>
+*{font-family:Verdana, Geneva, sans-serif;}
+h1{font-family:Georgia, "Times New Roman", Times, serif;}
+h2{font-family:Georgia, "Times New Roman", Times, serif;}
+h3{font-family:Georgia, "Times New Roman", Times, serif; margin-bottom:0; padding-bottom:0;}
+h4{font-family:Georgia, "Times New Roman", Times, serif;}
+h5{font-family:Georgia, "Times New Roman", Times, serif;}
+hr{margin:0; padding:0;}
+#title{font-variant:small-caps; font-weight:bolder; font-family:Georgia, "Times New Roman", Times, serif;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="banner"><h1>OpenID FAQ's and Documents</h1></div>
+<br />
+<br />
+<br />
+    <div id="content">
+        <h2>FAQ's</h2>
+        <div id="faq">
+            <br />
+            <h3>What is openID?</h3>
+            <hr />
+            <p> OpenID is what I call a profile management system. OpenID allows users to sign-in to a growing list of websites with one account. OpenID account usrs can also have more than one account to manage how they control their profiles. An OpenID is a <span id="title" title=" Uniform Resource Locator " style="cursor:help;" >url</span> giving to the user from when they sing up for an accont with a OpenId provider.</p>
+            <br />
+            <br />
+            
+            <h3>Where can I get an openID account?</h3>
+            <hr />
+            <p> The list of provieders is over 33,000 long and growing. Most user have an openID account and don't even know it. Here is a small list of major providers.</p>
+            <div id="pList">
+                <ul title=" List Provided by: OpenID.net ">
+                    <li> AOL - openid.aol.com/screenname</li>
+                    <li> Blogger - blogname.blogspot.com</li>
+                    <li> Flickr - www.flickr.com/photos/username</li>
+                    <li> LiveDoor - profile.livedoor.com/username</li>
+                    <li> LiveJournal - username.livejournal.com</li>
+                    <li> Orange (France Telecom) - http://openid.orange.fr/</li>
+                    <li> SmugMug - username.smugmug.com</li>
+                    <li> Technorati - technorati.com/people/technorati/username</li>
+                    <li> Vox - member.vox.com</li>
+                    <li> Yahoo - http://openid.yahoo.com</li>
+                    <li> WordPress.com - username.wordpress.com <span id="title" style="cursor:help;"title=" List Provided by: OpenID.net "> [1] </span></li>
+              </ul>
+            </div>
+            <br />
+            <br />
+            
+            <h3>What problems does this solve?</h3>
+            <hr />
+            <p>Too many passwords. This is a huge problem for online users with multiple accounts. Having one ID for many sites mean less to remeber, and if you sign-in right away you don't need to retype the same password over and over.</p>
+            <br />
+            <br />
+            
+            <h3>Is openID more safe then regular sign-in procedures?</h3>
+            <hr />
+            <p>No. OpenID is not more safe then the other ways, however it is not less safe either. OpenID is just a convient way to handle many user accounts, you still need to sign-in with a provider. But you only do so once when you open your browser, once signed-in with you openID provider then your <span id="title" title=" Uniform Resource Locator " style="cursor:help;" >url</span> from you home page is an option you can you use when signing in with other openID sites.</p>
+            <br />
+            <br />
+            
+            <h3>How does openID work?</h3>
+            <hr />
+            <p>After starting your browser, and loging-in with your openID provider. This confirms who you are, now when you are surfing the inter net and come across a site that you want to sing-up for you can use your openID <span id="title" title=" Uniform Resource Locator " style="cursor:help;" >url</span>(if the site excepts openID). When use your openID with-out sign-in up for the site it will redirect to your openID provider and then the two site confirm you are who you say you are, by <span id="title" title=" OpenID lets the sites choose their own method for transfering information. " style="cursor:help;" >magic</span>. <span id="title" style="cursor:help;"title=" See reference for small list of ways."> [2] </span> </p>
+            <br />
+            <br />
+            
+            <h3>What can openID do?</h3>
+            <hr />
+            <p>There are some implications like transfering friends lists using <span id="title" title=" XHTML Friends Network " style="cursor:help;" >xfn [3]</span>. Passing infromation that the user has already filled out between sites, openID is flexible.  </p>
+            <br />
+            <br />
+        </div>
+    	<h2>Documents</h2>
+        <br />
+        <div id="docs">
+        	<h3>Setting you own home page as your openID</h3>
+            <hr />
+            <p> This is easy and can be done with two lines of code place into your &lt;head&gt; tags. If I had an openID account with livejournal.com it would looks like this:
+            	<pre>
+                	<code>
+&lt;link rel="openid.server" href="http://www.livejournal.com/server" /&gt; 
+&lt;link rel="openid.delegate" href="http://scotthardy.livejournal.com/" /&gt;
+                    </code>
+                </pre>
+               <em>openid.server</em> tells the site your signing-in with to look to the server in the href <em>http://www.livejournal.com/server</em>.
+               <em>Openid.delegate</em> tells the site your signing-in with to use the openID in the href <em>http://www.livejournal.com/server</em> has the ID in question.
+             </p>
+  			<p>This is good because if something happens and now I don't trust my provider, I can easly change providers and then change the server and delegate to match the new provider.</p>
+        <br />
+        <br />
+        
+        <h3>Setting your log-in page to accept openID.</h3>
+        <hr />
+        <br />
+        <br />
+        <h4>Overview</h4>
+           <p>OK, there are some things you need to have set up. First you need a login page that has some kind of validation (user/email and password). If you are starting from scratch then I reconmend that you set you database with a full name field instead of a first name field and last name field. You don't need to do this, but it will save you time.</p>
+           <p>Second, you will need to add one file to you includes, this file is called <span id="title" title="On Steve's Y:drive mtm4086/openid simple.zip" style="cursor:help;">class.open.v3.php</span>. This file holds all the classes and also has an example page to help. Now you have your login page working and adding to the database.</p>
+           <br />
+           <br />
+        <h4>Step one</h4>
+        	<p> Add a input filed where your users will notice that they can use an openID to sign-in. A good spot for this is under your user/email and password input fields with a &lt;br /&gt;for some spacing. Give the text input field the name and id of "url", it should look like this: <pre><code>
+            
+&lt;label for="url"&gt;OR use &lt;a href="http://www.openid.net"&gt;openID&lt;/a&gt; &lt;span id="http"&gt;http://&lt;/span&gt;&lt;/label&gt;
+&lt;input type="text" name="url" id="url" value="" class="wide"/&gt;</code></pre>
+
+			Now that we have a spot for the users to enter an openID we should make it work for them.</p>
+            <br />
+            <br />
+        <h4>Step two</h4>
+        	<p>Now, require the <span id="title" title="On Steve's Y:drive mtm4086/openid simple.zip" style="cursor:help;">class.open.v3.php</span> file, and in your php set an if statment that checks the "url" (may be named/id differently for you), it should be something like this:<pre><code>
+            if($_POST['url']){}</code></pre>            
+            
+            Open the example page that came with <span id="title" title="On Steve's Y:drive mtm4086/openid simple.zip" style="cursor:help;">class.open.v3.php</span> file and copy from line 7 to 36 and paste it into the if statement you just made, like this:<pre><code> 
+            if($_POST['url']){
+            	$openid = new SimpleOpenID;
+	$openid-&gt;SetIdentity($_POST['openid_url']);
+	$openid-&gt;SetTrustRoot('http://' . $_SERVER["HTTP_HOST"]);
+	$openid-&gt;SetRequiredFields(array('email','fullname'));
+	$openid-&gt;SetOptionalFields(array('dob','gender','postcode','country','language','timezone'));
+	if ($openid-&gt;GetOpenIDServer()){
+		$openid-&gt;SetApprovedURL('http://' . $_SERVER["HTTP_HOST"] . $_SERVER["PATH_INFO"]);  	// Send Response from OpenID server to this script
+		$openid-&gt;Redirect(); 	// This will redirect user to OpenID Server
+	}else{
+		$error = $openid-&gt;GetError();
+		echo "ERROR CODE: " . $error['code'] . "&lt;br&gt;";
+		echo "ERROR DESCRIPTION: " . $error['description'] . "&lt;br&gt;";
+	}
+	exit;
+}
+else if($_GET['openid_mode'] == 'id_res'){ 	// Perform HTTP Request to OpenID server to validate key
+	$openid = new SimpleOpenID;
+	$openid-&gt;SetIdentity($_GET['openid_identity']);
+	$openid_validation_result = $openid-&gt;ValidateWithServer();
+	if ($openid_validation_result == true){ 		// OK HERE KEY IS VALID
+		echo "VALID";
+	}else if($openid-&gt;IsError() == true){			// ON THE WAY, WE GOT SOME ERROR
+		$error = $openid-&gt;GetError();
+		echo "ERROR CODE: " . $error['code'] . "&lt;br&gt;";
+		echo "ERROR DESCRIPTION: " . $error['description'] . "&lt;br&gt;";
+	}else{											// Signature Verification Failed
+		echo "INVALID AUTHORIZATION";
+	}
+}else if ($_GET['openid_mode'] == 'cancel'){ // User Canceled your Request
+	echo "USER CANCELED REQUEST";
+
+            }</code></pre>  
+            
+            Now if you test this on your page it will accecpt openID; however, none of the settings are for your page. Try it out and see what I mean.
+            It returns you to "http://www.imd.edumedia.ca/".</p>
+            <br />
+            <br />
+            <h4>Step three</h4>
+            <p> So we need to change two things to make it go back to your site. The two lines your looking for are:<pre><code>
+$openid-&gt;SetTrustRoot('http://' . $_SERVER["HTTP_HOST"]);</code></pre> and <pre><code>$openid-&gt;SetApprovedURL('http://' . $_SERVER["HTTP_HOST"] . $_SERVER["PATH_INFO"]);  	// Send Response from OpenID server to this script</code></pre>            
+            </p>
+			<p>$openid(is the object) -&gt; (is the method to call functions) SetTrustRoot (is the function). Inside the () of these two lines is where openID figures out where to redirect the user after they sign-in. $_SERVER["HTTP_HOST"] will return "imd.edumedia.ca" (notice there is NO slash). You just need to concatenate the full path to your site, and start with a leading slash, for my site it looks like this:<pre><code>$openid-&gt;SetTrustRoot('http://' . $_SERVER["HTTP_HOST"] . '/hard0092/mtm4086/openID/openIDTest.php');</code></pre></p>
+        
+        <p>On the SetApprovedURL line you need to concatenate the same information but in between _SERVER["HTTP_HOST"] and $_SERVER["PATH_INFO"], so it should look like this:<pre><code>$openid->SetApprovedURL('http://'.$_SERVER["HTTP_HOST"].'/hard0092/mtm4086/openID/openIDTest.php'.$_SERVER["PATH_INFO"]);</code></pre>
+
+        Remember this example is for my site, you will need your full site path from the browser. Once your done that test it again, if it returned you to your site then your all good for now, if not then check and recheck those two lines of code making sure you are concatenating right and have the " and ' in the right order.
+        </p>
+        <br />
+        <br />
+        <h4>Step four</h4>
+        <p> Now all we need to do is test the openID against our user database and if they exist just set the session, and if they are not in our database, grab there user information from openId and insert it into our table.</p><p> Right under the line where we SetTrustRoot there is a SetRequiredFields function setting "email" and "fullname" as the required fields. If you consult the <span id="title" title="On Steve's Y:drive mtm4086/openid simple.zip" style="cursor:help;">class.open.v3.php</span> file you can set thoses fields to what you want or need them to be. I just left the required fields the way it was (my database columes are "user_id, user_name, email, f_name(f=full), and pwd", so I don't need more information on the user. The big question is how does openId send the user info to me? OpenId uses a $_GET[] statment to pass information. If you make a profile and sign-in, look at the browser bar for email='' and fullname='', the information is right there that easy. Here is how you grab their email and fullname:
+        <pre><code>$email = $_GET['openid_sreg_email'];
+$fullname = $_GET['openid_sreg_fullname']</code></pre></p>
+
+		<p> Now lets check our database, use the email you get from openID instead of their openID because emails are unique and openID's are not.
+        <pre><code>Ex.
+    scott.hardy.livejournal.com = 
+    scott.hardy.livejournal.com/ = 
+    http://scott.hardy.livejournal.com = 
+    https://scott.hardy.livejournal.com = 
+    http://scott.hardy.livejournal.com/ = 
+    https://scott.hardy.livejournal.com/</code></pre> So you can test for all of that or just use their email, that will not change. Next we will be checking and inserting the information $openid->GetIdentity() gets the openID of the user logging in, and notice that the required fields are email and FULLNAME, so if you didn't set your database up with a fullname the you will have to explode it and then insert the first and last name.
+        </p>
+        <p> Select all from your users database where email equals $_GET['openid_sreg_email']. It should look like this:
+        <pre><code>
+$strSQL = "SELECT * FROM users WHERE email='".$_GET['openid_sreg_email']."'";
+$RS= mysql_query($strSQL);
+$numOfRows=mysql_num_rows($RS);
+if(!$numOfRows){
+    //--no match
+    $u = mysql_real_escape_string(trim($openid->GetIdentity()));
+    $f = mysql_real_escape_string(trim($_GET['openid_sreg_fullname']));
+    $e = mysql_real_escape_string(trim($_GET['openid_sreg_email']));
+    $p = md5(trim($openid->GetIdentity));	
+    $strSQL1 = "INSERT INTO users(user_name, pwd, f_name, email) VALUES('".$u."', '".$p."', '".$f."', '".$e."' )";
+    $RS1 = mysql_query($strSQL1);				
+    $_SESSION['user_name'] = $u;
+    $_SESSION['user_id'] =  uniqid('UU_', true);				
+}else{
+    $u = mysql_real_escape_string(trim($openid->GetIdentity()));
+    $_SESSION['user_name'] = $u;
+    $_SESSION['user_id'] =  uniqid('UU_', true);				
+}
+}</code></pre></p>
+
+			<p> mysql_num_rows($RS) will return the number of rows with the information from the WHERE statment. So if there are no rows (!$numOfRows) grab and INSERT while still protecting your databases with  mysql_real_escape_string(). Then set the session, and your done. I used the users openID as there user name and password, after md5ing the password. If you would like to see openID in action, <a href="http://imd.edumedia.ca/hard0092/mtm4086/openID/openIDTest.php">try it here</a>.
+        </div>
+        <br />
+        <br />
+        <div id="footer">
+        <h5>References</h5>
+                <ol>
+                    <li>List Provided by: OpenID.net - <a href="http://openid.net/get/">http://openid.net/get/</a> </li>
+                    <li>Client SSL certificates, SMS, Diffie-Hellman, IP based log-in restrictions. </li>
+                    <li> Wikipedia - <a href="http://en.wikipedia.org/wiki/Xfn">http://en.wikipedia.org/wiki/Xfn</a></li>
+                </ol> 
+        </div>  
+    </div>
+</div>
+
+
+</body>
+</html>

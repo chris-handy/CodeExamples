@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*************************************
+				DEFAULTS
+*************************************/
+*{
+	padding:0;
+	margin:0;
+}
+body, html{
+	font-size: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#FFF;
+}
+#imgwrapper{
+	margin:10px auto;	
+	width:1400px;
+	height:768px;
+	border:1px solid black;
+	background-image:url(../img/vwlogo.JPG);
+	background-repeat:no-repeat;
+}
+#wrapper{
+	width: 800px;				
+	margin:100px auto;
+	margin-left:500px;
+
+}
+h1{
+	padding: 0.5em  2.0em;
+	position:static;
+	top:300px;
+	left:100px;
+	text-align:right;
+	color:#900;
+	/*
+	static - the default way to render everything
+	absolute - position this element relative to the top left corner of the page
+		-animations, pop up adds, message windows, flyout menus
+		-not for layout
+	relative - elements ar emoved relative to where they originally appeared
+	
+	absolute inside relative container
+		-the absolute object is removed from the page and put back in
+		a position that is relative to its container, NOT the page
+		use top and left to moved the absolute object around
+	*/
+}
+/*************************************
+				GALLERY
+*************************************/
+ul#gallery{
+	list-style:none;
+	margin-top:20px;
+}
+
+ul#gallery li{
+	float:left;
+	display:inline;
+	width:150px;
+	height:100px;
+	position:relative;
+	margin-top:10px;
+	margin-bottom:20px;
+	margin-left:20px;
+	margin-right:15px;
+}
+
+/*ul#gallery li span.pos1{
+	position:absolute;
+	top:0px;
+	left:90px;
+	width:20px;
+	height:20px;
+	background: url(../img/bolt.png);
+}*/
+ul#gallery li span.pos2{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:20px;
+	height:20px;
+	background: url(../img/bolt.png);
+}
+/*ul#gallery li span.pos3{
+	position:absolute;
+	top:80px;
+	left:120px;
+	width:20px;
+	height:20px;
+	background: url(../img/bolt.png);
+}
+*/
+ul#gallery li a{
+	display:block;
+	margin:5px;
+}
+
+ul#gallery li a:hover{
+	
+}
+
+ul#gallery li a img{
+	border:1px solid black;	
+	padding:4px;
+
+	
+}
+ul#gallery li a img:hover{
+	border:1px solid #900;
+}	
+
+.clearAll{
+	clear:both;	
+}
+#footer{
+	margin-left:25px;
+	font-size:.5em;
+}	
+
+

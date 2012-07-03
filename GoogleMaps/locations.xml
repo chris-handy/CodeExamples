@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<location>
+		<title>Cornwall Location</title>
+		<address>1708 MacIntyre Ave</address>
+		<phone>(613) 937-8375</phone>
+		<lat>45.039108</lat>
+		<long>-74.754024</long>
+	</location>
+	<location>
+		<title>Ottawa Location</title>
+		<address>19c Deerfield Drive</address>
+		<phone>(613) 428-4881</phone>
+		<lat>45.355236</lat>
+		<long>-75.751784</long>
+		
+	</location>	
+	<location>
+		<title>Vancouver Location</title>
+		<address>1330 Burrard St</address>
+		<phone>(604) 820-0492</phone>
+		<lat>49.276637</lat>
+		<long>-123.131399</long>
+	</location>
+	<location>	
+		<title>Edmonton Location</title>
+		<address>10102 Jasper Ave NW</address>
+		<phone>(708) 739-6821</phone>
+		<lat>53.54106</lat>
+		<long>-113.493748</long>
+	</location>
+</data>

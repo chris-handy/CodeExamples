@@ -1,0 +1,41 @@
+
+#main{
+border: 1px solid black;
+border-collapse:collapse;
+
+}
+thead{
+background-color:#990000;
+}
+
+#main td{
+border: 1px solid black;
+}
+
+a{
+border:1px solid black;
+padding: 5px 50px;
+background-color:#990000;
+text-decoration:none;
+color:#FFF;
+}
+a:hover{
+color:#000066;
+}
+
+
+.over{
+background-color:#ffcc33;
+}
+
+th{
+border:1px solid black;
+}
+
+.alternateColor{
+	background-color:#990000;
+}
+
+.whiteColor{
+	background-color: #ffffff;
+}

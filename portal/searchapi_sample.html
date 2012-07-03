@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Google Search API</title>
+<script language="javascript" type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAk31nqJZoE8GJmTuX-mDlLhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxS8WshzcTbPvZzbVUQplsoTuJahTQ"> </script>
+<script>
+google.load("search", "1");
+function initialize() {
+        var searchControl = new google.search.SearchControl(null);
+		searchControl.addSearcher(new google.search.LocalSearch());
+		//searchControl.addSearcher(new google.search.WebSearch());
+		//searchControl.addSearcher(new google.search.VideoSearch());
+		//searchControl.addSearcher(new google.search.NewsSearch());
+		//searchControl.addSearcher(new google.search.ImageSearch());
+		//searchControl.addSearcher(new google.search.BookSearch());
+		//searchControl.addSearcher(new google.search.PatentSearch());
+		
+		var drawOptions = new google.search.DrawOptions();
+		drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_LINEAR);
+		//drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+		
+		var options = new google.search.SearcherOptions();
+		options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN);
+		searchControl.addSearcher(new google.search.VideoSearch(), options);
+		
+		options = new google.search.SearcherOptions();
+		options.setExpandMode(google.search.SearchControl.EXPAND_MODE_PARTIAL);
+		searchControl.addSearcher(new google.search.NewsSearch(), options);
+		
+		var siteSearch = new google.search.WebSearch();
+		siteSearch.setUserDefinedLabel("AlgonquinCollege.com");
+		siteSearch.setUserDefinedClassSuffix("siteSearch");
+		siteSearch.setSiteRestriction("algonquincollege.com");
+		searchControl.addSearcher(siteSearch);
+		
+		searchControl.setOnKeepCallback(this, MyKeepHandler);
+		
+		searchControl.draw(document.getElementById("searcher"), drawOptions);
+		searchControl.execute("web design");
+      }
+function MyKeepHandler(result) {
+  var node = result.html.cloneNode(true);
+  var savedResults = document.getElementById("Saved_results");
+  savedResults.appendChild(node);
+}
+google.setOnLoadCallback(initialize);
+
+</script>
+<style>
+#Search_result{
+float:left;
+}
+#Saved_results{
+float:right;
+margin:10px;
+padding:10px;
+}
+</style>
+</head>
+
+<body>
+<h1>Google Search API</h1>
+<div id="searcher"> </div>
+<div id="content"></div>
+<div id="Search_result"></div>
+<div id="Saved_results"></div>
+</body>
+</html>

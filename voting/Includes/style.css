@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper{
+width:500px;
+margin: 0px auto;
+}
+body {
+background-color:#666666;
+}
+#voteform{
+width:400px;
+
+
+}
